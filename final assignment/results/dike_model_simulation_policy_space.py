@@ -67,4 +67,4 @@ if __name__ == "__main__":
     with MultiprocessingEvaluator(dike_model) as evaluator:
         results = evaluator.perform_experiments(scenarios=ref_scenario, policies=n_policies, lever_sampling=Samplers.SOBOL)
 
-    ema_workbench.util.utilities.save_results(results, 'policy_space_refsc_256pol.tar.gz')
+    ema_workbench.util.utilities.save_results(results, '../data/policy_space_refsc_256pol.tar.gz')

@@ -64,4 +64,4 @@ if __name__ == "__main__":
     with MultiprocessingEvaluator(dike_model) as evaluator:
         results = evaluator.perform_experiments(scenarios=n_scenarios, policies=policy0)
 
-    ema_workbench.util.utilities.save_results(results, 'behaviour_run_10ksc_refpol.tar.gz')
+    ema_workbench.util.utilities.save_results(results, '../data/behaviour_run_10ksc_refpol.tar.gz')

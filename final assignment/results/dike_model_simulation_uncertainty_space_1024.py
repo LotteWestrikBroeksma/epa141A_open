@@ -65,4 +65,4 @@ if __name__ == "__main__":
     with MultiprocessingEvaluator(dike_model) as evaluator:
         results = evaluator.perform_experiments(scenarios=n_scenarios, policies=policy0, uncertainty_sampling=Samplers.SOBOL)
 
-    ema_workbench.util.utilities.save_results(results, 'uncertainty_space_1024sc_refpol.tar.gz')
+    ema_workbench.util.utilities.save_results(results, '../data/uncertainty_space_1024sc_refpol.tar.gz')
