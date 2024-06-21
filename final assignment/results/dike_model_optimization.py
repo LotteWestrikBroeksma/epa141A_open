@@ -9,15 +9,13 @@ from ema_workbench import (
 from ema_workbench.em_framework.optimization import EpsilonProgress
 from ema_workbench.util import ema_logging
 
-from problem_formulation import get_model_for_problem_formulation
-import matplotlib.pyplot as plt
-import seaborn as sns
+from new_problem_formulation import new_get_model_for_problem_formulation
 
 
 if __name__ == "__main__":
     ema_logging.log_to_stderr(ema_logging.INFO)
 
-    model, steps = get_model_for_problem_formulation(2)
+    model, steps = new_get_model_for_problem_formulation(2)
 
     reference_values = {
         "Bmax": 175,
@@ -56,9 +54,9 @@ if __name__ == "__main__":
             reference=ref_scenario,
         )
 
-    fig, (ax1, ax2) = plt.subplots(ncols=2, sharex=True)
-    fig, ax1 = plt.subplots(ncols=1)
-    ax1.plot(convergence.epsilon_progress)
-    ax1.set_xlabel("nr. of generations")
-    ax1.set_ylabel(r"$\epsilon$ progress")
-    sns.despine()
+    # fig, (ax1, ax2) = plt.subplots(ncols=2, sharex=True)
+    # fig, ax1 = plt.subplots(ncols=1)
+    # ax1.plot(convergence.epsilon_progress)
+    # ax1.set_xlabel("nr. of generations")
+    # ax1.set_ylabel(r"$\epsilon$ progress")
+    # sns.despine()

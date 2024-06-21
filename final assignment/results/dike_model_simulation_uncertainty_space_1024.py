@@ -7,7 +7,7 @@ from ema_workbench.util import ema_logging
 
 from fontTools.varLib.instancer import solver
 
-from problem_formulation import get_model_for_problem_formulation
+from new_problem_formulation import new_get_model_for_problem_formulation
 
 from ema_workbench.em_framework.salib_samplers import get_SALib_problem
 from SALib.analyze import sobol
@@ -17,7 +17,7 @@ from ema_workbench import MultiprocessingEvaluator
 if __name__ == "__main__":
     ema_logging.log_to_stderr(ema_logging.INFO)
 
-    dike_model, planning_steps = get_model_for_problem_formulation(3)
+    dike_model, planning_steps = new_get_model_for_problem_formulation(3)
 
     # Build a user-defined scenario and policy:
     reference_values = {
